@@ -1,3 +1,2 @@
-# web-platform-8uebjz
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/web-platform-8uebjz)
+# bad vscode v0.1
+### questionable project
