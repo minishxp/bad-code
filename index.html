@@ -2,7 +2,8 @@
   <head>
     <meta charset="UTF-8" />
 
-    <script src="js/script.js"></script>
+    <script src="js/uiControl.js"></script>
+
     <link rel="stylesheet" type="text/css" href="styles/ui.css" />
     <link rel="stylesheet" type="text/css" href="styles/editor.css" />
     <link
@@ -18,7 +19,7 @@
     <!-- ACTION BAR -->
     <div id="sidebar">
       <div id="sidebar-status">
-        <a id="sidebar-status-txt">Saved?</a>
+        <a id="sidebar-status-txt">Saved</a>
         <i class="glyphicon glyphicon-cloud"></i>
       </div>
 
@@ -64,7 +65,7 @@
 
     <!-- MAIN SIDEBAR -->
     <div id="action-sidebar">
-      <button tooltip="Search" class="as-btn">
+      <button tooltip="Search" onclick="toggleState()" class="as-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -101,7 +102,7 @@
     </div>
 
     <div id="__EDITOR-WRAP">
-      <textarea id="__EDITOR-MAIN">Testing</textarea>
+      <textarea spellcheck="false" id="__EDITOR-MAIN">Testing</textarea>
     </div>
   </body>
 </html>
