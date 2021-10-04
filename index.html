@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <script src="https://requirejs.org/docs/release/2.3.6/comments/require.js"></script>
+    <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+  </head>
+
+  <body>
+    <!-- ACTION BAR -->
+    <div id="sidebar">
+      <div id="sidebar-status">
+        <a id="sidebar-status-txt">Saved?</a>
+        <i class="glyphicon glyphicon-cloud"></i>
+      </div>
+
+      <i class="sb-btn-gly main-sb-btn glyphicon glyphicon-th-large"></i>
+
+      <button class="sb-btn">
+        <i
+          class="sb-btn-gly glyphicon glyphicon-folder-open"
+          style="
+            color: rgb(190, 190, 190);
+            text-shadow: none;
+            padding-right: 3px;
+          "
+        ></i>
+        Save
+      </button>
+
+      <button class="sb-btn">
+        <i
+          class="sb-btn-gly glyphicon glyphicon-edit"
+          style="
+            color: rgb(190, 190, 190);
+            text-shadow: none;
+            padding-right: 3px;
+          "
+        ></i>
+        Edit
+      </button>
+      <button class="sb-btn">
+        <i
+          class="sb-btn-gly glyphicon glyphicon-bullhorn"
+          style="
+            color: rgb(190, 190, 190);
+            text-shadow: none;
+            padding-right: 3px;
+          "
+        ></i>
+        Share
+      </button>
+
+      <div id="acc-wrap"></div>
+    </div>
+
+    <!-- MAIN SIDEBAR -->
+    <div id="action-sidebar">
+      <button tooltip="Search" class="as-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="rgb(150, 150, 150)"
+          width="1em"
+          height="1em"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M14.75 16a6.75 6.75 0 100-13.5 6.75 6.75 0 000 13.5zm0 1.5a8.25 8.25 0 100-16.5 8.25 8.25 0 000 16.5zM1.694 22.496l1.112 1.008 6.96-7.68a8.37 8.37 0 01-1.109-1.011l-6.963 7.683z"
+          ></path>
+        </svg>
+      </button>
+      <button class="as-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="rgb(150, 150, 150)"
+          width="1em"
+          height="1em"
+        >
+          <path
+            d="M14.346 0l.854 4.274 3.627-2.418 3.317 3.317L19.726 8.8 24 9.654v4.692l-4.274.854 2.418 3.627-3.317 3.317-3.627-2.418L14.346 24H9.654L8.8 19.726l-3.627 2.418-3.317-3.317L4.274 15.2 0 14.346V9.654L4.274 8.8 1.856 5.173l3.317-3.317L8.8 4.274 9.654 0h4.692zm-3.462 1.5l-.823 4.117-1.204.498-3.493-2.329-1.578 1.578 2.329 3.494-.498 1.203-4.117.823v2.232l4.117.823.498 1.204-2.329 3.493 1.578 1.578 3.494-2.329 1.203.498.823 4.117h2.232l.823-4.117 1.204-.498 3.492 2.329 1.579-1.578-2.329-3.493.498-1.204 4.117-.823v-2.232l-4.117-.823-.498-1.203 2.329-3.494-1.578-1.578-3.493 2.329-1.204-.498-.823-4.117h-2.232zM12 8.423a3.577 3.577 0 100 7.154 3.577 3.577 0 000-7.154zM6.923 12a5.077 5.077 0 1110.154 0 5.077 5.077 0 01-10.154 0z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- FILES SIDEBAR -->
+    <div id="files">
+      <button class="fl-btn">index.html</button>
+      <button class="fl-btn">styles.css</button>
+      <button class="fl-btn">script.js</button>
+    </div>
+
+    <div id="__EDITOR-WRAP">
+      <textarea id="__EDITOR-MAIN">Testing</textarea>
+    </div>
+  </body>
+</html>
