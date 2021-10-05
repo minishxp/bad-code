@@ -1,4 +1,4 @@
-document.onload = function () {
+document.addEventListener('DOMContentLoaded', function (event) {
   console.log('loaded')
   var __globalData = '';
   var textEditor = document.querySelector('#__EDITOR-MAIN');
@@ -7,17 +7,16 @@ document.onload = function () {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open('GET', theUrl, false);
     xmlHttp.send(null);
-    return xmlHttp.responseText;
+    return xmlHttp.response;
   }
 
   var fileBtns = document.getElementsByClassName('fl-btn');
-  fileBtns.forEach(function (node) {
-    node.onclick = function () {
-      textEditor.value = httpGet(
-        document.location + '/staticStorage/' + node.innerHTML
-      );
-    };
+  fileBtns.length
 
-    console.log(node);
-  });
-};
+  for (let item of fileBtns) {
+    item.onclick = function() {
+      textEditor.value = httpGet(window.location + "staticStorage/" + item.innerHTML)
+      console.log('click recieved for ' + window.location + "staticStorage/" + item.innerHTML)
+    }
+  }
+});
