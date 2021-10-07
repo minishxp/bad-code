@@ -2,17 +2,17 @@ var toggleState;
 
 document.addEventListener('DOMContentLoaded', function (event) {
   let searchToolbar_isOpen = true;
-  const editor = document.querySelector("#__EDITOR-MAIN")
+  const editor = document.querySelector("#__EDITOR-WRAP")
   const searchToolbar = document.querySelector('#files');
 
   toggleState = function () {
     bool__state = searchToolbar_isOpen;
     if (bool__state) {
-      searchToolbar.style.zIndex = '-50';
-      editor.style.filter = 'blur(50px);';
+      searchToolbar.style.display = 'none'
+      editor.style.filter = 'blur(0px)';
     } else {
-      searchToolbar.style.zIndex = '50';
-      editor.style.filter = 'blur(0px);';
+      searchToolbar.style.display = 'inline-block'
+      editor.style.filter = 'blur(5px)';
     }
 
     if (bool__state == true) {
