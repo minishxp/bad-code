@@ -9,4 +9,21 @@
   font-size: 20px;
   user-select: none;
   text-shadow: 0 0 3px black;
+  filter: none!important;
 }
+
+#main-notif-exit {
+  line-height: 20px !important;
+  border: none;
+  color: rgb(179, 179, 179);
+  border-radius: 3px;
+  background: red;
+  filter: none!important;
+}
+
+#main-notif-exit:hover {
+  box-shadow: 0 0 3px red;
+  filter: none!important;
+}
+
+#main-notif-txt {color: white!important; text-decoration: none;}

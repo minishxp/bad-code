@@ -4,10 +4,12 @@
 
     <script src="js/uiControl.js"></script>
     <script src="js/getStaticFiles.js"></script>
+    <script src="js/notif.js"></script>
 
     <link rel="stylesheet" type="text/css" href="styles/ui.css" />
     <link rel="stylesheet" type="text/css" href="styles/notif.css" />
     <link rel="stylesheet" type="text/css" href="styles/editor.css" />
+
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -21,9 +23,11 @@
 
   <body>
     <div id="main-notif">
-      Notification! yessss
+      <button id="main-notif-exit" onclick="toggleNotif('null')">X</button>
+      <a id="main-notif-txt">Notification! yessss</a>
     </div>
 
+    <div id="body-wrap">
     <!-- ACTION BAR -->
     <div id="sidebar">
       <div id="sidebar-status">
@@ -33,7 +37,7 @@
 
       <i class="sb-btn-gly main-sb-btn glyphicon glyphicon-th-large"></i>
 
-      <button class="sb-btn">
+      <button class="sb-btn" onclick="toggleNotif('Not added yet ):')">
         <i
           class="sb-btn-gly glyphicon glyphicon-folder-open"
           style="
@@ -112,5 +116,7 @@
     <div id="__EDITOR-WRAP">
       <textarea spellcheck="false" id="__EDITOR-MAIN">Testing</textarea>
     </div>
+
+  </div>
   </body>
 </html>
