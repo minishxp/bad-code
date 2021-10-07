@@ -1,5 +1,5 @@
 var toggleNotif = null
-var notifState = true
+var notifState = false
 
 document.addEventListener('DOMContentLoaded', function (event) {
   toggleNotif = function(text) {
