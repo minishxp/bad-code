@@ -30,13 +30,28 @@ document.addEventListener('DOMContentLoaded', function (event) {
   toggleState2 = function() {
     if (searchToolbar_isOpen) {
       if (settingsToolbar_isOpen) {
+        editor.style.filter = 'none';
         settingsToolbar_isOpen = false
         settings.style.display = 'none'
       }
       else {
+        editor.style.filter = 'blur(5px)';
         settingsToolbar_isOpen = true
+        searchToolbar_isOpen = false
         settings.style.display = 'inline-block'
         searchToolbar.style.display = 'none'
+      }
+    }
+    else {
+      if (settingsToolbar_isOpen) {
+        editor.style.filter = 'none';
+        settingsToolbar_isOpen = false
+        settings.style.display = 'none'
+      }
+      else {
+        editor.style.filter = 'blur(5px)';
+        settingsToolbar_isOpen = true
+        settings.style.display = 'inline-block'
       }
     }
   }

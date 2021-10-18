@@ -30,12 +30,21 @@
   padding: 6px 6px 6px 6px;
   border: none;
   border-radius: 3px;
-  box-shadow: 0 0 3px black;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 14px 0px;
   transition-duration: .3s;
 }
 
 .settings-api-btn:hover {
   background: rgb(97, 97, 245);
   color: white;
-  box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 9px 28px 0px;
+}
+
+#__settings-api-name-handle {
+  border-radius: 3px;
+  line-height: 50px;
+  margin: 50px 50px 50px 13px;
+  border: 1px solid rgb(143, 143, 143);
+  color: rgb(197, 197, 197);
+  text-decoration: none;
 }
