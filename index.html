@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="styles/notif.css" />
     <link rel="stylesheet" type="text/css" href="styles/editor.css" />
     <link rel="stylesheet" type="text/css" href="styles/ripple.css" />
+    <link rel="stylesheet" type="text/css" href="styles/settings-api/master.css" />
 
     <link
       rel="stylesheet"
@@ -88,7 +89,7 @@
             ></path>
           </svg>
         </button>
-        <button class="as-btn ripple">
+        <button class="as-btn ripple" onclick="toggleState2()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -108,6 +109,12 @@
         <button class="fl-btn">index.html</button>
         <button class="fl-btn">styles.css</button>
         <button class="fl-btn">script.js</button>
+      </div>
+
+      <div id="settings-wrap-x1" style="display: none;">
+        <a class="settings-api-txt"> Settings </a><br/>
+        <button class="settings-api-btn"> Version Info </button><br/>
+        <button class="settings-api-btn"> Check For Updates </button><br/>
       </div>
 
       <div id="__EDITOR-WRAP">

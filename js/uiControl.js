@@ -1,8 +1,11 @@
 var toggleState;
+var toggleState2;
 
 document.addEventListener('DOMContentLoaded', function (event) {
   let searchToolbar_isOpen = true;
+  let settingsToolbar_isOpen = false;
   const editor = document.querySelector("#__EDITOR-WRAP")
+  const settings = document.querySelector("#settings-wrap-x1")
   const searchToolbar = document.querySelector('#files');
 
   toggleState = function () {
@@ -23,4 +26,18 @@ document.addEventListener('DOMContentLoaded', function (event) {
       searchToolbar_isOpen = true;
     }
   };
+
+  toggleState2 = function() {
+    if (searchToolbar_isOpen) {
+      if (settingsToolbar_isOpen) {
+        settingsToolbar_isOpen = false
+        settings.style.display = 'none'
+      }
+      else {
+        settingsToolbar_isOpen = true
+        settings.style.display = 'inline-block'
+        searchToolbar.style.display = 'none'
+      }
+    }
+  }
 });
