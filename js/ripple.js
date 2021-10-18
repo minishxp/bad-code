@@ -1,3 +1,5 @@
+/*
+document.addEventListener('DOMContentLoaded', function (event) {
 function createRipple(event) {
   const button = event.currentTarget;
 
@@ -13,7 +15,7 @@ function createRipple(event) {
   const ripple = button.getElementsByClassName('ripple')[0];
 
   if (ripple) {
-    ripple.remove();
+    setTimeout(function() { ripple.remove(); }, 600)
   }
 
   button.appendChild(circle);
@@ -24,3 +26,5 @@ for (const button of buttons) {
   console.log(button)
   button.addEventListener('click', createRipple);
 }
+})
+*/
