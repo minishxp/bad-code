@@ -2,7 +2,7 @@ var toggleState;
 var toggleState2;
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  let searchToolbar_isOpen = true;
+  let searchToolbar_isOpen = false;
   let settingsToolbar_isOpen = false;
   const editor = document.querySelector("#__EDITOR-WRAP")
   const settings = document.querySelector("#settings-wrap-x1")

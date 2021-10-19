@@ -35,7 +35,7 @@
 
         <i class="sb-btn-gly main-sb-btn glyphicon glyphicon-th-large"></i>
 
-        <button class="sb-btn" onclick="toggleNotif('Not added yet ):')">
+        <button class="sb-btn" onclick="toggleNotif('This has not been added.')">
           <i
             class="sb-btn-gly glyphicon glyphicon-folder-open"
             style="
@@ -47,7 +47,7 @@
           Save
         </button>
 
-        <button class="sb-btn">
+        <button class="sb-btn" onclick="toggleNotif('This has not been added.')">
           <i
             class="sb-btn-gly glyphicon glyphicon-edit"
             style="
@@ -58,7 +58,7 @@
           ></i>
           Edit
         </button>
-        <button class="sb-btn">
+        <button class="sb-btn" onclick="toggleNotif('This has not been added.')">
           <i
             class="sb-btn-gly glyphicon glyphicon-bullhorn"
             style="
@@ -105,7 +105,7 @@
       </div>
 
       <!-- FILES SIDEBAR -->
-      <div id="files">
+      <div id="files" style="display: none;">
         <button class="fl-btn">index.html</button>
         <button class="fl-btn">styles.css</button>
         <button class="fl-btn">script.js</button>
@@ -117,6 +117,8 @@
         <button class="settings-api-btn"> Version Info </button><br/>
         <button class="settings-api-btn"> Check For Updates </button><br/>
       </div>
+
+      
 
       <div id="__EDITOR-WRAP">
         <textarea spellcheck="false" id="__EDITOR-MAIN">Testing</textarea>
