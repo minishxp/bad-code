@@ -14,8 +14,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
       searchToolbar.style.display = 'none'
       editor.style.filter = 'blur(0px)';
     } else {
+
       searchToolbar.style.display = 'inline-block'
       editor.style.filter = 'blur(5px)';
+
+      if (settingsToolbar_isOpen) {
+        settings.style.display = 'none'
+        settingsToolbar_isOpen = false
+      }
     }
 
     if (bool__state == true) {
