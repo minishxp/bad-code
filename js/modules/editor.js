@@ -1,6 +1,8 @@
+var __CD_EDITOR_MAIN = null
+
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  let editor = CodeMirror.fromTextArea(
+  __CD_EDITOR_MAIN = CodeMirror.fromTextArea(
     document.getElementById('__EDITOR-MAIN'),
     {
       mode: 'javascript',

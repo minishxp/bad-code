@@ -2,18 +2,18 @@ const server = 'https://XCodeStaticFileServer.0509798916.repl.co';
 let currentFile = null;
 
 function httpGet(theUrl) {
-  var e = ""
+  var e = '';
 
   fetch(theUrl)
     .then((data) => {
       console.log(data);
     })
     .then((post) => {
-      e = post
-      console.log(post)
+      e = post;
+      console.log(post);
     });
 
-    return e
+  return e;
 }
 
 console.log('[Script/GetStaticFiles] Loading static file functions...');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].onclick = function () {
       currentFile = buttons[i].innerHTML;
-      editor.value = read(buttons[i].innerHTML);
+      __CD_EDITOR_MAIN.getDoc().setValue(read(currentFile));
     };
   }
 });
