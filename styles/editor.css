@@ -6,7 +6,7 @@
   height: 100%;
 }
 
-#__EDITOR-MAIN {
+#__EDITOR-MAIN, .CodeMirror {
   z-index: 101;
   overflow: scroll;
   width: 100%;
@@ -16,4 +16,15 @@
   color: white;
   border: none;
   font-family: monospace;
+}
+
+::selection {
+  background: white;
+  color: rgb(44, 44, 44);
+}
+
+.CodeMirror-linenumbers, .CodeMirror-gutters {
+  background-color: rgb(54, 54, 54);
+  border: 1px rgb(54, 54, 54) solid;
+  color: rgb(200, 200, 200);
 }
