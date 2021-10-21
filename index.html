@@ -2,17 +2,13 @@
   <head>
     <meta charset="UTF-8" />
 
-    <!-- CODE EDITOR -->
-    <!-- Scripts -->
+    <!-- ===================================  Scripts =================================== -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
-
-    <!-- OTHER -->
-    <!-- Scripts -->
     <script src="js/uiControl.js"></script>
     <script src="js/getStaticFiles.js"></script>
     <script src="js/notif.js"></script>
@@ -20,19 +16,24 @@
     <script src="js/modules/editor.js"></script>
     <script src="js/modules/tooltip.js"></script>
 
-    <!-- Styles -->
+    <!-- ====================================== Styles ====================================== -->
     <link rel="stylesheet" type="text/css" href="styles/master.css" />
-    
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
   </head>
 
   <body>
     <div id="main-notif" style="display: none">
       <button id="main-notif-exit" onclick="toggleNotif('null')">X</button>
-      <a id="main-notif-txt">Notification! yessss</a>
+      <a id="main-notif-txt">none</a>
     </div>
 
     <div id="body-wrap">
-      <!-- ACTION BAR -->
+
+      <!-- =================================== ACTION BAR =================================== -->
       <div id="sidebar">
         <div id="sidebar-status">
           <a id="sidebar-status-txt">Saved</a>
@@ -88,7 +89,7 @@
         <div id="acc-wrap"></div>
       </div>
 
-      <!-- MAIN SIDEBAR -->
+      <!-- =================================== MAIN SIDEBAR =================================== -->
       <div id="action-sidebar">
         <button data-toggle="tooltip"  data-placement="left" title="FILES" onclick="toggleState()" class="as-btn ripple">
           <svg
@@ -121,13 +122,14 @@
         </button>
       </div>
 
-      <!-- FILES SIDEBAR -->
+      <!-- =================================== FILES SIDEBAR =================================== -->
       <div id="files" style="display: none">
         <button class="fl-btn">index.html</button>
         <button class="fl-btn">styles.css</button>
         <button class="fl-btn">script.js</button>
       </div>
 
+      <!-- =================================== SETTINGS BAR =================================== -->
       <div id="settings-wrap-x1" style="display: none">
         <a class="settings-api-txt"> Settings </a><br />
         <a id="__settings-api-name-handle">minishxp / x-code-editor</a>
@@ -135,6 +137,7 @@
         <button class="settings-api-btn">Check For Updates</button><br />
       </div>
 
+      <!-- ==================================== CODE EDITOR =================================== -->
       <div id="__EDITOR-WRAP">
         <textarea id="__EDITOR-MAIN"></textarea>
       </div>

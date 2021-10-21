@@ -28,3 +28,7 @@
   border: 1px rgb(54, 54, 54) solid;
   color: rgb(200, 200, 200);
 }
+
+.CodeMirror {
+  font-family: monospace!important;
+}
