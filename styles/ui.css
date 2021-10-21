@@ -8,6 +8,7 @@ body {
 * {
   color: white;
   cursor: default;
+  outline: none!important;
   font-family: 'Montserrat', sans-serif;
 }
 

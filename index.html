@@ -1,7 +1,8 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <!-- MONACO -->
+
+    <!-- CODE EDITOR -->
     <!-- Scripts -->
     <link
       rel="stylesheet"
@@ -17,23 +18,11 @@
     <script src="js/notif.js"></script>
     <script src="js/ripple.js"></script>
     <script src="js/modules/editor.js"></script>
+    <script src="js/modules/tooltip.js"></script>
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="styles/ui.css" />
-    <link rel="stylesheet" type="text/css" href="styles/notif.css" />
-    <link rel="stylesheet" type="text/css" href="styles/editor.css" />
-    <link rel="stylesheet" type="text/css" href="styles/ripple.css" />
-    <link rel="stylesheet" type="text/css" href="styles/tooltip.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="styles/settings-api/master.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" type="text/css" href="styles/master.css" />
+    
   </head>
 
   <body>
@@ -101,7 +90,7 @@
 
       <!-- MAIN SIDEBAR -->
       <div id="action-sidebar">
-        <button tooltip="Search" onclick="toggleState()" class="as-btn ripple">
+        <button data-toggle="tooltip"  data-placement="left" title="FILES" onclick="toggleState()" class="as-btn ripple">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -116,8 +105,8 @@
           </svg>
         </button>
 
-        <button class="as-btn ripple" onclick="toggleState2()">
-          <span class="tooltiptext">Tooltip text</span>
+        <button data-toggle="tooltip"  data-placement="left" title="SETTINGS"  class="as-btn ripple" onclick="toggleState2()">
+          
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
