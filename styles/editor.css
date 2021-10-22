@@ -1,3 +1,7 @@
+/*
+  Editor styles
+*/
+
 #__EDITOR-WRAP {
   
   display: inline-block;
@@ -6,7 +10,7 @@
   height: 100%;
 }
 
-#__EDITOR-MAIN, .CodeMirror {
+#__EDITOR-MAIN {
   z-index: 101;
   overflow: scroll;
   width: 100%;
@@ -23,12 +27,3 @@
   color: rgb(44, 44, 44);
 }
 
-.CodeMirror-linenumbers, .CodeMirror-gutters {
-  background-color: rgb(54, 54, 54);
-  border: 1px rgb(54, 54, 54) solid;
-  color: rgb(200, 200, 200);
-}
-
-.CodeMirror {
-  font-family: monospace!important;
-}

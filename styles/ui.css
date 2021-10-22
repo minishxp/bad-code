@@ -1,3 +1,7 @@
+/*
+ Main File For XCode's UI.
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 body {
@@ -8,7 +12,7 @@ body {
 * {
   color: white;
   cursor: default;
-  outline: none!important;
+  outline: none !important;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -19,7 +23,8 @@ body {
   background: rgb(65, 65, 65);
   border: 1px rgb(70, 70, 70) solid;
 
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 9px -4px, rgba(0, 0, 0, 0.14) 0px 14px 21px 2px, rgba(0, 0, 0, 0.12) 0px 5px 24px 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 9px -4px,
+    rgba(0, 0, 0, 0.14) 0px 14px 21px 2px, rgba(0, 0, 0, 0.12) 0px 5px 24px 4px;
 }
 
 .sb-btn {
@@ -47,7 +52,6 @@ body {
   border: 1px rgb(79, 79, 150) solid;
 }
 
-
 #sidebar-status {
   pointer-events: none;
   background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Blanco.svg/120px-Blanco.svg.png');
@@ -69,7 +73,7 @@ body {
 
 #files {
   position: absolute;
-  border-top: none;
+  border-top: 0px solid black;
   display: inline-block;
   border: 1px rgb(70, 70, 70) solid;
   z-index: 50;
@@ -85,12 +89,13 @@ body {
   height: 30px;
   background: rgb(60, 60, 60);
   color: rgb(200, 200, 200);
-  font-family: Menlo,Cascadia Mono,Consolas,Liberation Mono,monospace;
+  font-family: Menlo, Cascadia Mono, Consolas, Liberation Mono, monospace;
   text-align: left;
   font-size: 12.5px;
 }
 
-svg, path {
+svg,
+path {
   cursor: pointer;
 }
 
@@ -98,7 +103,6 @@ svg, path {
   background: rgb(78, 78, 78);
   user-select: none;
 }
-
 
 .main-sb-btn {
   padding-left: 16.5px;
@@ -156,12 +160,12 @@ i {
   background: rgb(73, 73, 145);
 }
 .sb-btn-gly {
-  padding-top: 0!important;
+  padding-top: 0 !important;
 }
 
 #main {
   border: red 1px solid;
   width: 80%;
-  height:90%;
+  height: 90%;
   float: left;
 }

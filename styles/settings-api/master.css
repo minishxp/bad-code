@@ -1,6 +1,5 @@
 #settings-wrap-x1 {
   position: absolute;
-  border-top: none;
   display: inline-block;
   border: 1px rgb(70, 70, 70) solid;
   z-index: 50;
@@ -30,8 +29,9 @@
   padding: 6px 6px 6px 6px;
   border: none;
   border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 14px 0px;
-  transition-duration: .3s;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 14px 0px;
+  transition-duration: 0.3s;
 }
 
 .settings-api-btn:hover {

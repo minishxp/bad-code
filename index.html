@@ -3,18 +3,16 @@
     <meta charset="UTF-8" />
 
     <!-- ===================================  Scripts =================================== -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    
+
     <script src="js/uiControl.js"></script>
     <script src="js/getStaticFiles.js"></script>
     <script src="js/notif.js"></script>
     <script src="js/ripple.js"></script>
     <script src="js/modules/editor.js"></script>
     <script src="js/modules/tooltip.js"></script>
+    <script src="js/modules/require.js"></script>
+    <script src="js/monaco.js"></script>
 
     <!-- ====================================== Styles ====================================== -->
     <link rel="stylesheet" type="text/css" href="styles/master.css" />
@@ -32,7 +30,6 @@
     </div>
 
     <div id="body-wrap">
-
       <!-- =================================== ACTION BAR =================================== -->
       <div id="sidebar">
         <div id="sidebar-status">
@@ -91,7 +88,13 @@
 
       <!-- =================================== MAIN SIDEBAR =================================== -->
       <div id="action-sidebar">
-        <button data-toggle="tooltip"  data-placement="left" title="FILES" onclick="toggleState()" class="as-btn ripple">
+        <button
+          data-toggle="tooltip"
+          data-placement="left"
+          title="FILES"
+          onclick="toggleState()"
+          class="as-btn ripple"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -106,8 +109,13 @@
           </svg>
         </button>
 
-        <button data-toggle="tooltip"  data-placement="left" title="SETTINGS"  class="as-btn ripple" onclick="toggleState2()">
-          
+        <button
+          data-toggle="tooltip"
+          data-placement="left"
+          title="SETTINGS"
+          class="as-btn ripple"
+          onclick="toggleState2()"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -133,14 +141,13 @@
       <div id="settings-wrap-x1" style="display: none">
         <a class="settings-api-txt"> Settings </a><br />
         <a id="__settings-api-name-handle">minishxp / x-code-editor</a>
-        <button class="settings-api-btn">Version Info</button><br />
-        <button class="settings-api-btn">Check For Updates</button><br />
+        <button class="settings-api-btn ripple">Version Info</button><br />
+        <button class="settings-api-btn ripple">Check For Updates</button><br />
       </div>
 
       <!-- ==================================== CODE EDITOR =================================== -->
-      <div id="__EDITOR-WRAP">
-        <textarea id="__EDITOR-MAIN"></textarea>
-      </div>
+      <div id="__EDITOR-WRAP"></div>
+      <div id="editor"></div>
     </div>
   </body>
 </html>
