@@ -1,21 +1,28 @@
+
 <html>
   <head>
     <meta charset="UTF-8" />
 
-    <!-- ===================================  Scripts =================================== -->
+    <!-- ===================================  Scripts a=================================== -->
     
 
     <script src="js/uiControl.js"></script>
     <script src="js/getStaticFiles.js"></script>
     <script src="js/notif.js"></script>
     <script src="js/ripple.js"></script>
+    <script src="js/readfile.js"></script>
     <script src="js/modules/editor.js"></script>
     <script src="js/modules/tooltip.js"></script>
-    <script src="js/modules/require.js"></script>
+    <!--<script src="js/modules/require.js"></script>-->
     <script src="js/monaco.js"></script>
 
     <!-- ====================================== Styles ====================================== -->
+    <a></a>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles/master.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <link
       rel="stylesheet"
@@ -41,7 +48,7 @@
 
         <button
           class="sb-btn"
-          onclick="toggleNotif('This has not been added.')"
+          onclick="readFile()"
         >
           <i
             class="sb-btn-gly glyphicon glyphicon-folder-open"
@@ -51,7 +58,7 @@
               padding-right: 3px;
             "
           ></i>
-          Save
+          Open
         </button>
 
         <button
@@ -146,8 +153,9 @@
       </div>
 
       <!-- ==================================== CODE EDITOR =================================== -->
-      <div id="__EDITOR-WRAP"></div>
-      <div id="editor"></div>
+      <div id="__EDITOR-WRAP">
+        <texttarea id="__EDITOR-MAIN"></textarea>
+      </div>
     </div>
   </body>
 </html>
