@@ -1,27 +1,20 @@
-let readFile
+let readFile;
 
-document.addEventListener('DOMContentLoaded', function() {
-  readFile = function() {
+document.addEventListener('DOMContentLoaded', function () {
+  readFile = function () {
     var input = document.createElement('input');
     input.type = 'file';
 
-    input.onchange = e => { 
-
-      // getting a hold of the file reference
-      var file = e.target.files[0]; 
-
-      // setting up the reader
+    input.onchange = (e) => {
+      var file = e.target.files[0];
       var reader = new FileReader();
-      reader.readAsText(file,'UTF-8');
-
-      // here we tell the reader what to do when it's done reading...
-      reader.onload = readerEvent => {
-          var content = readerEvent.target.result; // this is the content!
-          console.log( content );
-      }
-
-    }
+      reader.readAsText(file, 'UTF-8');
+      reader.onload = (readerEvent) => {
+        var content = readerEvent.target.result;
+        editor.setValue(content);
+      };
+    };
 
     input.click();
-  }
-})
+  };
+});

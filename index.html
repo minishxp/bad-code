@@ -1,11 +1,22 @@
-
 <html>
   <head>
     <meta charset="UTF-8" />
 
-    <!-- ===================================  Scripts a=================================== -->
+    <!-- CodeMiror Scripts -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+  </link>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/monokai.min.css">
+  
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
+  </script>
     
-
+    <script type="text/javascript" 
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/mode/javascript/javascript.js"></script>
+  
+  <!-- ===================================  Scripts a=================================== -->
     <script src="js/uiControl.js"></script>
     <script src="js/getStaticFiles.js"></script>
     <script src="js/notif.js"></script>
@@ -13,16 +24,35 @@
     <script src="js/readfile.js"></script>
     <script src="js/modules/editor.js"></script>
     <script src="js/modules/tooltip.js"></script>
+    <script src="js/editTitle.js"></script>
     <!--<script src="js/modules/require.js"></script>-->
     <script src="js/monaco.js"></script>
 
+
     <!-- ====================================== Styles ====================================== -->
     <a></a>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="styles/master.css" />
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
 
     <link
       rel="stylesheet"
@@ -40,16 +70,13 @@
       <!-- =================================== ACTION BAR =================================== -->
       <div id="sidebar">
         <div id="sidebar-status">
-          <a id="sidebar-status-txt">Saved</a>
+          <a id="sidebar-status-txt">Untitled</a>
           <i class="glyphicon glyphicon-cloud"></i>
         </div>
 
         <i class="sb-btn-gly main-sb-btn glyphicon glyphicon-th-large"></i>
 
-        <button
-          class="sb-btn"
-          onclick="readFile()"
-        >
+        <button class="sb-btn" onclick="readFile()">
           <i
             class="sb-btn-gly glyphicon glyphicon-folder-open"
             style="
@@ -62,8 +89,8 @@
         </button>
 
         <button
-          class="sb-btn"
-          onclick="toggleNotif('This has not been added.')"
+          class="sb-btn" id="rename-btn"
+          
         >
           <i
             class="sb-btn-gly glyphicon glyphicon-edit"
@@ -139,23 +166,19 @@
 
       <!-- =================================== FILES SIDEBAR =================================== -->
       <div id="files" style="display: none">
-        <button class="fl-btn">index.html</button>
-        <button class="fl-btn">styles.css</button>
-        <button class="fl-btn">script.js</button>
+        <button class="fl-btn">project.main.lua</button>
       </div>
 
       <!-- =================================== SETTINGS BAR =================================== -->
       <div id="settings-wrap-x1" style="display: none">
         <a class="settings-api-txt"> Settings </a><br />
-        <a id="__settings-api-name-handle">minishxp / x-code-editor</a>
-        <button class="settings-api-btn ripple">Version Info</button><br />
+        <a id="__settings-api-name-handle">minishxp / Untitled</a>
+        <button class="settings-api-btn ripple" onclick="toggleNotif('Version 0.1 Alpha')">Version Info</button><br />
         <button class="settings-api-btn ripple">Check For Updates</button><br />
       </div>
 
       <!-- ==================================== CODE EDITOR =================================== -->
-      <div id="__EDITOR-WRAP">
-        <texttarea id="__EDITOR-MAIN"></textarea>
-      </div>
+      <div id="__EDITOR-WRAP"></div>
     </div>
   </body>
 </html>

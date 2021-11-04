@@ -67,8 +67,8 @@ body {
   padding-top: 8px;
   z-index: 35;
   user-select: none;
-  color: rgb(21, 187, 21);
-  text-shadow: 0 0 5px green;
+  color: rgb(223, 223, 223);
+  text-shadow: 0 0 5px rgb(170, 170, 170);
 }
 
 #files {

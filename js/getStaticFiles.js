@@ -41,13 +41,13 @@ function add(file) {
 console.log('[Script/GetStaticFiles] Loaded!');
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  const editor = document.getElementById('__EDITOR-MAIN');
+  //const editor = document.getElementById('__EDITOR-MAIN');
 
   var buttons = document.getElementsByClassName('fl-btn');
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].onclick = function () {
       currentFile = buttons[i].innerHTML;
-      __CD_EDITOR_MAIN.getDoc().setValue(read(currentFile));
+      editor.setValue(read(currentFile))
     };
   }
 });
