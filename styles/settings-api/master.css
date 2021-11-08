@@ -23,28 +23,31 @@
 }
 
 .settings-api-btn {
-  margin: 3px 13px 13px 13px;
+  margin: 5px 13px 13px 13px;
   color: rgb(200, 200, 200);
   background: rgb(90, 90, 90);
   padding: 6px 6px 6px 6px;
-  border: none;
   border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
-    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 14px 0px;
+  border: 1px rgb(90, 90, 90) solid;
   transition-duration: 0.3s;
 }
 
 .settings-api-btn:hover {
   background: rgb(97, 97, 245);
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 9px 28px 0px;
+
+}
+
+#__settings-api-name-hande__outer {
+  margin-bottom: 15px;
+  width: 80%!important;
+  margin-left: 10px;
+  border: 1px solid rgb(92, 92, 92);
+  border-radius: 3px;
 }
 
 #__settings-api-name-handle {
-  border-radius: 3px;
-  line-height: 50px;
-  margin: 50px 50px 50px 13px;
-  border: 1px solid rgb(143, 143, 143);
+  margin: 15px 15px 15px 15px!important;
   color: rgb(197, 197, 197);
   text-decoration: none;
 }
