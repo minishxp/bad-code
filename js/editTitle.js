@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let title = document.getElementById("sidebar-status-txt")
     let proh_title = document.getElementById("__settings-api-name-handle")
     title.innerHTML = newTitle
-    proh_title.innerHTML = "minishxp / " + newTitle
+    proh_title.innerHTML = "minishxp / " + newTitle.replaceAll(" ", "-")
   }
 
   document.getElementById("rename-btn").onclick = function() {
