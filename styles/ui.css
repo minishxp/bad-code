@@ -28,13 +28,13 @@ body {
 }
 
 .sb-btn {
-  z-index: 33; /* ZINDEX HANDLER */
+  z-index: 33;
   user-select: none;
   margin: 7px 2px 2px 2px;
   border: rgb(65, 65, 65) 1px solid;
   background: none;
   cursor: pointer;
-  transition-duration: 0.1s;
+  transition-duration: 0.3s;
   outline: none;
   border-radius: 7px;
   color: rgb(172, 172, 172) !important;

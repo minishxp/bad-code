@@ -1,5 +1,6 @@
 var toggleState;
 var toggleState2;
+var dashBoard;
 
 document.addEventListener('DOMContentLoaded', function (event) {
   let searchToolbar_isOpen = false;
@@ -32,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
       searchToolbar_isOpen = true;
     }
   };
+
+  dashBoard = function() {
+    window.location.href += "home.html";
+  }
 
   toggleState2 = function() {
     if (searchToolbar_isOpen) {
