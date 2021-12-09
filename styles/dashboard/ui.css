@@ -1,12 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+:root {
+  --topbar-main-text__border__margin: 7px;
+  --transparenct-img: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Blanco.svg/120px-Blanco.svg.png');
+}
+
 body {
   background: rgb(45, 45, 45) !important;
 }
 
 * {
+  user-select: none;
   color: white;
   cursor: default;
   outline: none !important;
   font-family: 'Montserrat', sans-serif;
+}
+
+#topbar-main {
+  white-space: nowrap;
+  border: 1px solid rgb(97, 97, 97);
+  border-radius: 3px;
+}
+
+.topbar-main__text {
+  user-select: none;
+  /* transition-duration: .3s; */
+  width: 30%;
+  color: rgb(200, 200, 200);
+  font-weight: 100;
+  transition-duration: .3s;
+  pointer-events: none;
+  background: var(--transparenct-img);
+}
+
+.topbar-main__text-border {
+  display: inline-block;
+  padding: 5.05333333333333px 0;
+  height: 25px;
+  background: rgb(49, 49, 49);
+  text-align:center;
+  width: 30%;
+  border-radius: 3px;
+  border: 1px solid rgb(82, 82, 82);
+  margin: var(--topbar-main-text__border__margin) var(--topbar-main-text__border__margin) var(--topbar-main-text__border__margin) var(--topbar-main-text__border__margin);
+
+  transition-duration: .3s;
+  cursor: pointer;
+}
+
+.topbar-main__text-border:hover {
+  background: rgb(55, 55, 55);
+  border-color: rgb(95, 95, 95);
+}
+
+.topbar-main__text-border:hover ~ .topbar-main__text:hover {
+  color: white;
+  box-shadow: 0 0 3px solid white;
 }
