@@ -105,17 +105,17 @@
         </button>
         <button
           class="sb-btn"
-          onclick="toggleNotif('This has not been added.')"
+          onclick="saveToLocalFile()"
         >
           <i
-            class="sb-btn-gly glyphicon glyphicon-bullhorn"
+            class="sb-btn-gly glyphicon glyphicon-save-file"
             style="
               color: rgb(190, 190, 190);
               text-shadow: none;
               padding-right: 3px;
             "
           ></i>
-          Share
+          Save
         </button>
 
         <div id="acc-wrap"></div>
@@ -167,7 +167,7 @@
 
       <!-- =================================== FILES SIDEBAR =================================== -->
       <div id="files" style="display: none">
-        <button class="fl-btn">project.main.py</button>
+        <button class="fl-btn">Local.txt</button>
       </div>
 
       <!-- =================================== SETTINGS BAR =================================== -->
@@ -176,7 +176,7 @@
         <div id="__settings-api-name-hande__outer">
         <a id="__settings-api-name-handle">minishxp / Untitled</a>
         </div>
-        <button class="settings-api-btn ripple" onclick="toggleNotif('Version 0.1 Alpha')">Version Info</button><br />
+        <button class="settings-api-btn ripple" onclick="toggleNotif('Version 0.2 Alpha')">Version Info</button><br />
         <button class="settings-api-btn ripple">Check For Updates</button><br />
       </div>
 
